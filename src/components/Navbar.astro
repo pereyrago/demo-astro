@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+
+---
+
+<nav>
+    <ul>
+        <li>
+            <a href="/"><Image width="130" height="35" src="https://assets.soyhenry.com/logos/LOGO-HENRY-04_w.png" alt="logo-icon"/></a>
+        </li>
+        <li>
+            <a href="/careers">Carreras</a>
+        </li>
+        <li>
+            <a href="/payments">Planes de Pago</a>
+        </li>
+        <li>
+            <a href="/enterprise">Empresas</a>
+        </li>
+    </ul>
+</nav>
+<style>
+    nav {
+        height: 80px;
+    }
+    li {
+        list-style: none;
+    }
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 4rem;
+    }
+    img {
+        object-fit: cover;
+        margin-right: 5rem;
+    }
+    a {
+        color: var(--color);
+        text-decoration: none;
+    }
+</style>

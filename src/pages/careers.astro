@@ -8,8 +8,8 @@ const data = await getAllUsers();
 const users = data?.users;
 ---
 
-<Layout title="PAGE #1 " description='pagina demo'>
-	<Hero/>
+<Layout title="PAGE #2 " description='pagina demo'>
+	<Hero title='Conviértete en un Full Stack Developer' subTitle='' description='Un programa intensivo en línea que simula un entorno de trabajo real y te prepara para una carrera exitosa como desarrollador Full Stack.'/>
 	<BaseContainer title='Testimonios'>
 	{users?.map(user => <Card user={user} />)}
 	</BaseContainer>

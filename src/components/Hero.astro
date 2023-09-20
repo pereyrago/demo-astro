@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets'
+interface Props {
+    title?: string
+    subTitle?: string
+    description?: string
+    button?: string
+}
+const {title = 'Invertimos en tu educación', subTitle= 'Comienza a estudiar Desarrollo Full Stack o Data Science', description='Despega tu carrera en tecnología. Estudia a remoto y de manera intensiva. ¿Y lo mejor? Solo nos pagas cuando consigues un nuevo trabajo.', button='Aplicar'} = Astro.props
+---
+
+
+<section>
+    <main>
+        <h1>{title}</h1>
+        <h3>{subTitle}</h3>
+        <p>{description}</p>
+        <button>{button}</button>
+    </main>
+    <aside>
+        <Image height={500} width={380} src="https://assets.soyhenry.com/henry-landing/assets/PrincipalSection/homepage-hero.jpg" alt="hero">
+    </aside>
+</section>
+<style>
+    section {
+        display: flex;
+        height: 100%;
+        height: 500px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative
+    }
+    main {
+        text-align: left;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 47vw;
+        max-width: 640px;
+    }
+    aside {
+        position: absolute;
+        right: 1rem;
+        top: 0px;
+        height: 100%;
+        width: 550px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    p {
+        font-size: 1rem;
+        margin-bottom: 48px;
+        max-width: 584px;
+    }
+    button  {
+        background-color: var(--henry-background);
+        padding: 1rem 3rem;
+        max-width: fit-content;
+        font-size:20px ;
+        font-weight: 900;
+        border: none;
+        border-radius: 8px;
+    }
+</style>

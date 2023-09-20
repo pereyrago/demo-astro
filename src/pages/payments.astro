@@ -8,8 +8,8 @@ const data = await getAllUsers();
 const users = data?.users;
 ---
 
-<Layout title="PAGE #1 " description='pagina demo'>
-	<Hero/>
+<Layout title="PAGE #3 " description='pagina demo'>
+	<Hero title='Educación de calidad, a tu alcance' description='Simple, flexible y transparente' subTitle='' button='otro boton'/>
 	<BaseContainer title='Testimonios'>
 	{users?.map(user => <Card user={user} />)}
 	</BaseContainer>
