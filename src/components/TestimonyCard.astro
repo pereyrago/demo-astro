@@ -4,7 +4,7 @@ const {user} = Astro.props
 ---
 <article>
     <p>{`${user.firstName} ${user.lastName}`}</p>
-    <Image width={250} height={250} src={user.image} alt={user.firstName} />
+    <Image width={250} height={250} src={user.image} alt={user.firstName} loading={'lazy'}/>
 </article>
 <style>
         article {

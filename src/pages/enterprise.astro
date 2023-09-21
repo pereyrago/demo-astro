@@ -9,7 +9,9 @@ const users = data?.users;
 ---
 
 <Layout title="PAGE #4 " description='pagina demo'>
-	<Hero title='Capacitamos al mejor talento tech de LATAM' description='Encuentra los mejores desarrolladores o data scientists para tu empresa o entrena a tu equipo en las últimas tecnologías.' subTitle=''/>
+	<Hero title='Capacitamos al mejor talento tech de LATAM'
+	 description='Encuentra los mejores desarrolladores o data scientists para tu empresa o entrena a tu equipo en las últimas tecnologías.'
+	 subTitle=''/>
 	<BaseContainer title='Testimonios'>
 	{users?.map(user => <Card user={user} />)}
 	</BaseContainer>

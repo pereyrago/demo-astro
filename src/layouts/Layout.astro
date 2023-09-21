@@ -5,9 +5,10 @@ import Navbar from '../components/Navbar.astro';
 interface Props {
 	title: string;
 	description: string;
+	doTransition?: boolean
 }
 
-const { title, description } = Astro.props;
+const { title, description, doTransition=true } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,7 +17,7 @@ const { title, description } = Astro.props;
 		<SEO description={description} title={title}/>
 	</head>
 	<body>
-		<ViewTransitions  />
+		{doTransition ? <ViewTransitions  />: null}
 		<header>
 			<Navbar/>
 		</header>
