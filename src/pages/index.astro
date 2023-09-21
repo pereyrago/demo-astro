@@ -1,18 +1,23 @@
 ---
 import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
-import BaseContainer from '../containers/BaseContainer.astro';
+import Section from '../containers/BaseContainer.astro';
 import getAllUsers from '../api/users';
 import Card from '../components/TestimonyCard.astro';
+import Timer from '../components/Timer';
 const data = await getAllUsers();
 const users = data?.users;
 ---
 
 <Layout title="PAGE #1 " description='pagina demo'>
-	<Hero/>
-	<BaseContainer title='Testimonios'>
-	{users?.map(user => <Card user={user} />)}
-	</BaseContainer>
+	<Hero />
+	<Section title='Testimonios'>
+		{users?.map(user => <Card user={user} />)}
+	</Section>
+	<Section title="TIMER">
+		<span>JS se corrió por <Timer client:visible /> segundos</span>
+		
+	</Section>
 </Layout>
 
 <style>
@@ -22,5 +27,12 @@ const users = data?.users;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
+	}
+	span {
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 5em;
 	}
 </style>
